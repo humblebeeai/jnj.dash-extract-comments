@@ -1,7 +1,23 @@
-node_modules/
-dist/
-build/
-.next/
-.env
-.env.*
+cat > .gitignore << 'EOF'
+# Virtual environments
+.venv/
+dashvenv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit
+.streamlit/
+
+# OS
 .DS_Store
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+EOF
