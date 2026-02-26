@@ -71,6 +71,22 @@ if uploaded:
     map_value = "Mapped"
 
     # ---------------------------
+    # description PDF UPLOAD SECTION
+    # ---------------------------
+
+    st.divider()
+    st.subheader("Upload description file (optional)")
+
+    description_pdf = st.file_uploader(
+        "Upload a PDF file for reference:",
+        type=["pdf"],
+        help="Upload a description PDF that will be referenced in the output."
+    )
+
+    if description_pdf:
+        st.success(f"✓ PDF file '{description_pdf.name}' uploaded successfully")
+
+    # ---------------------------
     # GENERATE BUTTON
     # ---------------------------
 
